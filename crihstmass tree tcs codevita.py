@@ -11,7 +11,7 @@ for i in range((n)):
     x=0
     if(k<=1):
         print("You cannot generate christmas tree")
-    elif(k>=20):
+    elif(k>20):
         print("Tree is no more")
     elif(k==2):
         for i in range(2+1,0,-1):
