@@ -27,4 +27,12 @@ else:
     x=fib(l+1)
     print(x[l])
 
+#gcd of number short code
+a=list(map(int,input().split()))
+def gcd(a,b):
+    if(b==0):
+        return a
+    else:
+        return(gcd(b,a%b))
+print(gcd(a[0],a[1]))
 
