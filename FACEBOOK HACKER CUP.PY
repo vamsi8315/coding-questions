@@ -32,7 +32,7 @@ for i in range(l):
             if(lal>0 and lal==abs(i-j)-1):
                 mat[i][j]="Y"
                             
-    print("Case "+"#"+str(kas)+":")
+    print("Case "+"#"+str(kas)+":")#this is ok
     kas=kas+1
     for i in range(le):
          print(*mat[i],sep="")
