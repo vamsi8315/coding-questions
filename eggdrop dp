@@ -1,0 +1,10 @@
+  int eggDrop(int n, int k) 
+    {
+     vector<int> dp(n + 1, 0);
+int m;
+for (m = 0; dp[n] < k; m++)
+for (int k = n; k > 0; --k)
+dp[k] += dp[k - 1] + 1;
+return m;
+     
+    }
