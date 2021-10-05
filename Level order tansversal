@@ -1,0 +1,51 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+    int data;
+    struct Node *left,*right;
+    
+};
+
+void preorder(Node* root){
+    queue<Node*>m;
+    m.push(root);
+    while(m.empty()==false){
+        Node* e=m.front();
+        cout<<e->data;
+        m.pop();
+        if(e->left!=NULL){
+            m.push(e->left);
+        }
+        if(e->right!=NULL){
+            m.push(e->right);
+        }
+    }
+}
+Node* newNode(int val)
+{
+    Node* temp=new Node;
+    temp->data=val;
+    temp->left=NULL;
+    temp->right=NULL;
+    return temp;
+}
+int main()
+{
+    Node* root=newNode(1);
+    root->left=newNode(2);
+    root->right = newNode(3);
+    root->left->left = newNode(4);
+    root->left->right = newNode(5);
+ 
+ preorder(root);
+    return 0;
+}
