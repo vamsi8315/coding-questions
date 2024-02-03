@@ -1,0 +1,64 @@
+/**************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+***************************/
+#include <iostream>
+using namespace std;
+class Node{
+    
+    public:
+    int data;
+    Node* next;
+    
+    Node(int data)
+    {
+        this->data=data;
+        this->next=NULL;
+    }
+
+};
+// class LinkedList{
+    
+//     public:
+    
+    
+// };
+Node* buildLinkedList(Node* head,int length){
+    
+    Node *temp=head;
+    int i;
+    while(length--){
+        cin>>i;
+        Node *newNode= new Node(i);
+        temp->next=newNode;
+        temp=newNode;
+        
+    }
+    return head;
+}
+void printLinkedList(Node* head)
+{
+    Node* temp=head;
+    while(temp!=NULL)
+    {
+        cout<<temp->data<<"-->";
+        temp=temp->next;
+    }
+}
+int main()
+{
+    Node *head= new Node(10);
+    
+    int n;
+    cin>>n;
+    head=buildLinkedList(head,n);
+    printLinkedList(head);
+  //  cout<<head->data;
+    
+  
+    return 0;
+}
